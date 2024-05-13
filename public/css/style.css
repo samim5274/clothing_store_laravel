@@ -1,0 +1,36 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+#sdile-section{background-color: #dbdbdb88;}
+nav {
+margin-top: 40px;
+padding: 24px;
+text-align: center;
+font-family: Raleway;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+#nav-1 {
+background: #dbdbdb;
+}
+
+.link-1 {
+transition: 0.3s ease;
+background: #dbdbdb;
+color: #000000;
+font-size: 20px;
+text-decoration: none;
+border-top: 4px solid #dbdbdb;
+border-bottom: 4px solid #dbdbdb;
+padding: 20px 0;
+margin: 0 20px;
+}
+.link-1:hover {
+border-top: 4px solid #ffffff;
+border-bottom: 4px solid #ffffff;
+padding: 6px 0; 
+color: #ffffff;
+}
