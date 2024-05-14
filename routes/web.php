@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\subcategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,12 @@ Route::get('/', function () {
 Route::get('/add-product', function(){
     return view('addProduct');
 });
+
+Route::get('/add-sub-category', function(){
+    return view('subCategory');
+});
+
+Route::resource('/subcategorys', subcategoryController::class);
 
 Route::resource('/products', ProductController::class);
 

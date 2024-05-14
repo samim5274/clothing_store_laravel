@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2024 at 03:43 PM
+-- Generation Time: May 14, 2024 at 02:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -83,7 +83,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2024_05_13_051715_create_products_table', 1),
-(6, '2024_05_13_110400_create_categorys_table', 2);
+(6, '2024_05_13_110400_create_categorys_table', 2),
+(7, '2024_05_14_103123_create_sub_categorys_table', 3),
+(8, '2024_05_14_103123_create_subcategorys_table', 4);
 
 -- --------------------------------------------------------
 
@@ -153,7 +155,23 @@ INSERT INTO `products` (`id`, `name`, `category`, `price`, `qty`, `isActive`, `i
 (13, 'Kids Shirt', 3, 120, 1200, 1, '/img/products/product-17155927901.jpg|/img/products/product-17155927902.jpg|/img/products/product-17155927903.jpg|/img/products/product-17155927904.jpg', '2024-05-13 03:33:10', '2024-05-13 03:33:10'),
 (14, 'Ladies Bottom', 5, 400, 1200, 1, '/img/products/product-17155981121.jpg|/img/products/product-17155981122.jpg|/img/products/product-17155981123.jpg|/img/products/product-17155981124.jpg', '2024-05-13 05:01:52', '2024-05-13 05:01:52'),
 (15, 'Men Polo Shirt', 4, 400, 700, 1, '/img/products/product-17155981621.jpg|/img/products/product-17155981622.jpg|/img/products/product-17155981623.jpg|/img/products/product-17155981624.jpg', '2024-05-13 05:02:42', '2024-05-13 05:02:42'),
-(16, 'Boys Solid t-shirt', 1, 150, 200, 1, '/img/products/product-17155982031.jpg|/img/products/product-17155982032.jpg|/img/products/product-17155982033.jpg|/img/products/product-17155982034.jpg', '2024-05-13 05:03:23', '2024-05-13 05:03:23');
+(16, 'Boys Solid t-shirt', 1, 150, 200, 1, '/img/products/product-17155982031.jpg|/img/products/product-17155982032.jpg|/img/products/product-17155982033.jpg|/img/products/product-17155982034.jpg', '2024-05-13 05:03:23', '2024-05-13 05:03:23'),
+(17, 'Girl T-shirt', 2, 120, 1000, 1, '/img/products/product-17156813011.jpg|/img/products/product-17156813012.jpg|/img/products/product-17156813013.jpg|/img/products/product-17156813014.jpg', '2024-05-14 04:08:21', '2024-05-14 04:08:21'),
+(18, 'Kids t-shirt set', 3, 230, 7000, 1, '/img/products/product-17156813291.jpg|/img/products/product-17156813292.jpg|/img/products/product-17156813293.jpg|/img/products/product-17156813294.jpg', '2024-05-14 04:08:49', '2024-05-14 04:08:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subcategorys`
+--
+
+CREATE TABLE `subcategorys` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `CategoryId` int(11) NOT NULL,
+  `subCategoryName` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -216,6 +234,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `subcategorys`
+--
+ALTER TABLE `subcategorys`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -242,7 +266,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -254,7 +278,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `subcategorys`
+--
+ALTER TABLE `subcategorys`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`

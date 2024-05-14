@@ -59,7 +59,7 @@ class ProductController extends Controller
 
             $product->image=implode('|', $imgLocation);
             $product->save();
-            return back()->with('success','Product savesuccessfully.');
+            return back()->with('success','Product save successfully.');
         }
         else
         {
