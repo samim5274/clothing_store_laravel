@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2024 at 02:54 PM
+-- Generation Time: May 20, 2024 at 01:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,26 +24,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorys`
+-- Table structure for table `expenses`
 --
 
-CREATE TABLE `categorys` (
+CREATE TABLE `expenses` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `category_name` varchar(255) NOT NULL,
+  `expensesName` varchar(255) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `categorys`
+-- Dumping data for table `expenses`
 --
 
-INSERT INTO `categorys` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
-(1, 'Boy', NULL, NULL),
-(2, 'Girl', NULL, NULL),
-(3, 'Infant', NULL, NULL),
-(4, 'Men', NULL, NULL),
-(5, 'Women', NULL, NULL);
+INSERT INTO `expenses` (`id`, `expensesName`, `amount`, `date`, `created_at`, `updated_at`) VALUES
+(1, 'Daily Expenses', 100, '2024-05-07', '2024-05-20 05:09:01', '2024-05-20 05:09:01'),
+(2, 'Daily Expenses', 1001, '2024-05-07', '2024-05-20 05:39:37', '2024-05-20 05:39:37'),
+(3, 'Daily Expenses', 90, '2024-05-07', '2024-05-20 05:39:57', '2024-05-20 05:39:57'),
+(4, 'Daily Expenses', 450, '2024-05-06', '2024-05-20 05:44:12', '2024-05-20 05:44:12'),
+(5, 'Daily Expenses', 560, '2024-05-11', '2024-05-20 05:45:24', '2024-05-20 05:45:24');
 
 -- --------------------------------------------------------
 
@@ -85,7 +87,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2024_05_13_051715_create_products_table', 1),
 (6, '2024_05_13_110400_create_categorys_table', 2),
 (7, '2024_05_14_103123_create_sub_categorys_table', 3),
-(8, '2024_05_14_103123_create_subcategorys_table', 4);
+(8, '2024_05_14_103123_create_subcategorys_table', 4),
+(9, '2024_05_20_084617_create_expenses_table', 5);
 
 -- --------------------------------------------------------
 
@@ -157,21 +160,8 @@ INSERT INTO `products` (`id`, `name`, `category`, `price`, `qty`, `isActive`, `i
 (15, 'Men Polo Shirt', 4, 400, 700, 1, '/img/products/product-17155981621.jpg|/img/products/product-17155981622.jpg|/img/products/product-17155981623.jpg|/img/products/product-17155981624.jpg', '2024-05-13 05:02:42', '2024-05-13 05:02:42'),
 (16, 'Boys Solid t-shirt', 1, 150, 200, 1, '/img/products/product-17155982031.jpg|/img/products/product-17155982032.jpg|/img/products/product-17155982033.jpg|/img/products/product-17155982034.jpg', '2024-05-13 05:03:23', '2024-05-13 05:03:23'),
 (17, 'Girl T-shirt', 2, 120, 1000, 1, '/img/products/product-17156813011.jpg|/img/products/product-17156813012.jpg|/img/products/product-17156813013.jpg|/img/products/product-17156813014.jpg', '2024-05-14 04:08:21', '2024-05-14 04:08:21'),
-(18, 'Kids t-shirt set', 3, 230, 7000, 1, '/img/products/product-17156813291.jpg|/img/products/product-17156813292.jpg|/img/products/product-17156813293.jpg|/img/products/product-17156813294.jpg', '2024-05-14 04:08:49', '2024-05-14 04:08:49');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `subcategorys`
---
-
-CREATE TABLE `subcategorys` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `CategoryId` int(11) NOT NULL,
-  `subCategoryName` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(18, 'Kids t-shirt set', 3, 230, 7000, 1, '/img/products/product-17156813291.jpg|/img/products/product-17156813292.jpg|/img/products/product-17156813293.jpg|/img/products/product-17156813294.jpg', '2024-05-14 04:08:49', '2024-05-14 04:08:49'),
+(19, 'Kids Ramper', 3, 190, 10000, 1, '/img/products/product-17161942281.jpg|/img/products/product-17161942282.jpg|/img/products/product-17161942283.jpg|/img/products/product-17161942284.jpg', '2024-05-20 02:37:08', '2024-05-20 02:37:08');
 
 -- --------------------------------------------------------
 
@@ -195,9 +185,9 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `categorys`
+-- Indexes for table `expenses`
 --
-ALTER TABLE `categorys`
+ALTER TABLE `expenses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -234,12 +224,6 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subcategorys`
---
-ALTER TABLE `subcategorys`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -251,9 +235,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `categorys`
+-- AUTO_INCREMENT for table `expenses`
 --
-ALTER TABLE `categorys`
+ALTER TABLE `expenses`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
@@ -266,7 +250,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -278,13 +262,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `subcategorys`
---
-ALTER TABLE `subcategorys`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users`

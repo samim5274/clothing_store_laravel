@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\subcategoryController;
+use App\Http\Controllers\ExpensesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +23,13 @@ Route::get('/add-product', function(){
     return view('addProduct');
 });
 
-Route::get('/add-sub-category', function(){
-    return view('subCategory');
+Route::get('/expenses-detail', function(){
+    return view('expenses');
 });
 
-Route::resource('/subcategorys', subcategoryController::class);
+Route::resource('/products', \App\Http\Controllers\ProductController::class);
 
-Route::resource('/products', ProductController::class);
+Route::resource('/save-expenses', \App\Http\Controllers\ExpensesController::class);
 
 Route::get('/add-product','App\Http\Controllers\ProductController@showProduct');
 
