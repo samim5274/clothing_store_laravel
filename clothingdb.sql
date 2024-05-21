@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2024 at 08:23 PM
+-- Generation Time: May 21, 2024 at 02:33 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -111,7 +111,9 @@ INSERT INTO `groups` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (2, 'Girl', '2024-05-20 11:24:13', '2024-05-20 11:24:13'),
 (3, 'Infant', '2024-05-20 11:24:17', '2024-05-20 11:24:17'),
 (4, 'Men', '2024-05-20 11:24:20', '2024-05-20 11:24:20'),
-(5, 'Women', '2024-05-20 11:24:24', '2024-05-20 11:24:24');
+(5, 'Women', '2024-05-20 11:24:24', '2024-05-20 11:24:24'),
+(6, 'Electronics', '2024-05-20 23:48:16', '2024-05-20 23:48:16'),
+(7, 'Food', '2024-05-20 23:55:37', '2024-05-20 23:55:37');
 
 -- --------------------------------------------------------
 
@@ -276,7 +278,18 @@ INSERT INTO `subgroups` (`id`, `groupid`, `subgroup`, `created_at`, `updated_at`
 (6, 1, 'T-shirt set', '2024-05-20 11:56:16', '2024-05-20 11:56:16'),
 (7, 1, 'Short', '2024-05-20 11:56:22', '2024-05-20 11:56:22'),
 (8, 2, 'Ramper', '2024-05-20 11:56:31', '2024-05-20 11:56:31'),
-(9, 4, 'Jacket', '2024-05-20 11:58:32', '2024-05-20 11:58:32');
+(9, 4, 'Jacket', '2024-05-20 11:58:32', '2024-05-20 11:58:32'),
+(10, 6, 'Mobail', '2024-05-20 23:48:24', '2024-05-20 23:48:24'),
+(11, 6, 'Laptop', '2024-05-20 23:48:31', '2024-05-20 23:48:31'),
+(12, 6, 'Desktop', '2024-05-20 23:48:42', '2024-05-20 23:48:42'),
+(13, 6, 'RAM', '2024-05-20 23:48:49', '2024-05-20 23:48:49'),
+(14, 6, 'SSD', '2024-05-20 23:48:53', '2024-05-20 23:48:53'),
+(15, 6, 'Head Phone', '2024-05-20 23:55:05', '2024-05-20 23:55:05'),
+(16, 6, 'SD card', '2024-05-20 23:55:15', '2024-05-20 23:55:15'),
+(17, 7, 'Rice', '2024-05-20 23:55:42', '2024-05-20 23:55:42'),
+(18, 7, 'Oil', '2024-05-20 23:55:48', '2024-05-20 23:55:48'),
+(19, 7, 'Chips', '2024-05-20 23:56:02', '2024-05-20 23:56:02'),
+(20, 7, 'Water', '2024-05-21 00:40:05', '2024-05-21 00:40:05');
 
 -- --------------------------------------------------------
 
@@ -383,7 +396,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -413,7 +426,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `subgroups`
 --
 ALTER TABLE `subgroups`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`

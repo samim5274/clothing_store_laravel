@@ -37,12 +37,28 @@
     </tr>
     @foreach($objsubgroup as $show)
     <tr>        
-        <td style="border: 1px solid black">{{ $show['groupid'] }}</td>
-        <td style="border: 1px solid black">{{ $show['groupid'] }}</td>
-        <td style="border: 1px solid black">{{ $show['subgroup'] }}</td>
+        <td style="border: 1px solid black">{{ $show->groupid }}</td>
+        <td style="border: 1px solid black">{{ $show->Groups->name }}</td>
+        <td style="border: 1px solid black">{{ $show->subgroup }}</td>
     </tr>
     @endforeach
 </table>
+<br><hr><br>
+
+<select name="cbxGroup" id="cbxGroup" onchange="getOption(this)">
+    <option selected disabled>  Chose a group </option>
+    @foreach ($objShow as $value)
+    <option value="{{ $value->id }}"> {{ $value->name }} </option>
+    @endforeach
+</select>
+
+
+<p id="demo"></p>
+
+
+<br><br><hr>
+
+<script src="/js/dependentDropdown.js"></script>
 
 </body>
 </html>

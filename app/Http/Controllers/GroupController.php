@@ -45,8 +45,7 @@ class GroupController extends Controller
     public function showGroup(){
         $objShow = Group::all();
         $objsubgroup = Subgroup::all();
-        return view('addgroup', compact('objShow','objsubgroup'));
-        
+        return view('addgroup', compact('objShow','objsubgroup'));        
     }
 
     /**

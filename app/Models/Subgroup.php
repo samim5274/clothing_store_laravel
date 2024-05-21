@@ -11,7 +11,7 @@ class Subgroup extends Model
 
     protected $fillable = ['groupid','subgroup','created_at','updated_at'];
 
-    public function Group(){
-        return $this->hasOne(Group::class, 'id', 'groupid');
+    public function Groups(){
+        return $this->belongsTo(Group::class, 'groupid', 'id'); 
     }
 }
