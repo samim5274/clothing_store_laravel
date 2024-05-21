@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2024 at 01:45 PM
+-- Generation Time: May 20, 2024 at 08:23 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,7 +45,33 @@ INSERT INTO `expenses` (`id`, `expensesName`, `amount`, `date`, `created_at`, `u
 (2, 'Daily Expenses', 1001, '2024-05-07', '2024-05-20 05:39:37', '2024-05-20 05:39:37'),
 (3, 'Daily Expenses', 90, '2024-05-07', '2024-05-20 05:39:57', '2024-05-20 05:39:57'),
 (4, 'Daily Expenses', 450, '2024-05-06', '2024-05-20 05:44:12', '2024-05-20 05:44:12'),
-(5, 'Daily Expenses', 560, '2024-05-11', '2024-05-20 05:45:24', '2024-05-20 05:45:24');
+(5, 'Daily Expenses', 560, '2024-05-11', '2024-05-20 05:45:24', '2024-05-20 05:45:24'),
+(6, 'Daily Expenses', 1000, '2024-05-11', '2024-05-20 08:55:42', '2024-05-20 08:55:42'),
+(7, 'Weekly Expenses', 150, '2024-05-11', '2024-05-20 09:21:31', '2024-05-20 09:21:31'),
+(8, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:13', '2024-05-20 09:38:13'),
+(9, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:15', '2024-05-20 09:38:15'),
+(10, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:15', '2024-05-20 09:38:15'),
+(11, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:16', '2024-05-20 09:38:16'),
+(12, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:17', '2024-05-20 09:38:17'),
+(13, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:17', '2024-05-20 09:38:17'),
+(14, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:17', '2024-05-20 09:38:17'),
+(15, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:17', '2024-05-20 09:38:17'),
+(16, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:18', '2024-05-20 09:38:18'),
+(17, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:18', '2024-05-20 09:38:18'),
+(18, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:18', '2024-05-20 09:38:18'),
+(19, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:18', '2024-05-20 09:38:18'),
+(20, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:30', '2024-05-20 09:38:30'),
+(21, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:30', '2024-05-20 09:38:30'),
+(22, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:31', '2024-05-20 09:38:31'),
+(23, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:31', '2024-05-20 09:38:31'),
+(24, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:31', '2024-05-20 09:38:31'),
+(25, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:31', '2024-05-20 09:38:31'),
+(26, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:31', '2024-05-20 09:38:31'),
+(27, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:32', '2024-05-20 09:38:32'),
+(28, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:32', '2024-05-20 09:38:32'),
+(29, 'Daily Expenses', 100, '2024-05-11', '2024-05-20 09:38:32', '2024-05-20 09:38:32'),
+(30, 'Daily Expenses', 1000, '2024-05-11', '2024-05-20 10:24:19', '2024-05-20 10:24:19'),
+(31, 'Daily', 100, '2024-05-11', '2024-05-20 10:24:26', '2024-05-20 10:24:26');
 
 -- --------------------------------------------------------
 
@@ -62,6 +88,30 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `groups`
+--
+
+CREATE TABLE `groups` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `groups`
+--
+
+INSERT INTO `groups` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Boy', '2024-05-20 11:23:47', '2024-05-20 11:23:47'),
+(2, 'Girl', '2024-05-20 11:24:13', '2024-05-20 11:24:13'),
+(3, 'Infant', '2024-05-20 11:24:17', '2024-05-20 11:24:17'),
+(4, 'Men', '2024-05-20 11:24:20', '2024-05-20 11:24:20'),
+(5, 'Women', '2024-05-20 11:24:24', '2024-05-20 11:24:24');
 
 -- --------------------------------------------------------
 
@@ -88,7 +138,43 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2024_05_13_110400_create_categorys_table', 2),
 (7, '2024_05_14_103123_create_sub_categorys_table', 3),
 (8, '2024_05_14_103123_create_subcategorys_table', 4),
-(9, '2024_05_20_084617_create_expenses_table', 5);
+(9, '2024_05_20_084617_create_expenses_table', 5),
+(10, '2024_05_20_145951_create_subcategorys_table', 6),
+(11, '2024_05_20_150311_create_categorys_table', 7),
+(12, '2024_05_20_163057_create_others_table', 8),
+(13, '2024_05_20_171015_create_groups_table', 9),
+(14, '2024_05_20_173448_create_subgroups_table', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `others`
+--
+
+CREATE TABLE `others` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `others`
+--
+
+INSERT INTO `others` (`id`, `name`, `uid`, `created_at`, `updated_at`) VALUES
+(1, 'Jomsher Ali', 929904, '2024-05-20 10:40:40', '2024-05-20 10:40:40'),
+(2, 'Jomsher Ali', 929904, '2024-05-20 10:41:31', '2024-05-20 10:41:31'),
+(3, 'Jomsher Ali', 929904, '2024-05-20 10:41:33', '2024-05-20 10:41:33'),
+(4, 'Jomsher Ali', 929904, '2024-05-20 10:41:34', '2024-05-20 10:41:34'),
+(5, 'Jomsher Ali', 929904, '2024-05-20 10:41:35', '2024-05-20 10:41:35'),
+(6, 'Jomsher Ali', 929904, '2024-05-20 10:41:36', '2024-05-20 10:41:36'),
+(7, 'Shofiya Begum', 929905, '2024-05-20 10:42:29', '2024-05-20 10:42:29'),
+(8, 'Adil Ahnaf', 929913, '2024-05-20 10:42:50', '2024-05-20 10:42:50'),
+(9, 'Prothoma Akter', 9299015, '2024-05-20 11:08:51', '2024-05-20 11:08:51'),
+(10, 'Riyad', 929916, '2024-05-20 11:09:07', '2024-05-20 11:09:07'),
+(11, 'Sadiya', 929918, '2024-05-20 11:09:18', '2024-05-20 11:09:18');
 
 -- --------------------------------------------------------
 
@@ -166,6 +252,35 @@ INSERT INTO `products` (`id`, `name`, `category`, `price`, `qty`, `isActive`, `i
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `subgroups`
+--
+
+CREATE TABLE `subgroups` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `groupid` int(11) NOT NULL,
+  `subgroup` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `subgroups`
+--
+
+INSERT INTO `subgroups` (`id`, `groupid`, `subgroup`, `created_at`, `updated_at`) VALUES
+(1, 2, 'Tops', '2024-05-20 11:42:50', '2024-05-20 11:42:50'),
+(2, 1, 'Thirt', '2024-05-20 11:43:03', '2024-05-20 11:43:03'),
+(3, 4, 'Pant', '2024-05-20 11:43:10', '2024-05-20 11:43:10'),
+(4, 5, 'Trouser', '2024-05-20 11:43:15', '2024-05-20 11:43:15'),
+(5, 4, 'Polo', '2024-05-20 11:56:06', '2024-05-20 11:56:06'),
+(6, 1, 'T-shirt set', '2024-05-20 11:56:16', '2024-05-20 11:56:16'),
+(7, 1, 'Short', '2024-05-20 11:56:22', '2024-05-20 11:56:22'),
+(8, 2, 'Ramper', '2024-05-20 11:56:31', '2024-05-20 11:56:31'),
+(9, 4, 'Jacket', '2024-05-20 11:58:32', '2024-05-20 11:58:32');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -198,9 +313,21 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `groups`
+--
+ALTER TABLE `groups`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `others`
+--
+ALTER TABLE `others`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -224,6 +351,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `subgroups`
+--
+ALTER TABLE `subgroups`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -238,7 +371,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `expenses`
 --
 ALTER TABLE `expenses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -247,10 +380,22 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `groups`
+--
+ALTER TABLE `groups`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `others`
+--
+ALTER TABLE `others`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -263,6 +408,12 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `products`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `subgroups`
+--
+ALTER TABLE `subgroups`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`

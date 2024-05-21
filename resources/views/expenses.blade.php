@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expenses Detail</title>
+    <title>Expenses Details</title>
 </head>
 <body>
     
@@ -18,6 +18,23 @@
     <input type="date" name="date" value="2024-05-11">
     <button>Save</button>
 </form>
+
+<br><hr><br>
+
+<form method="POST" action="/others-details" enctype="multipart/form-data">
+    @csrf
+    <input type="text" name="name" value="Jomsher Ali">
+    <input type="number" name="uid" value="929904">
+    <button>Save</button>
+</form>
+<br><hr>
+
+
+<select name="" id="">
+@foreach($objshow as $show)
+    <option value="{{ $show['uid'] }}">{{ $show['uid'] }} / {{ $show['name'] }}</option>
+@endforeach
+</select>
 
 
 </body>

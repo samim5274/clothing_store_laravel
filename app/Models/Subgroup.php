@@ -5,18 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Subgroup extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        'name',
-        'category',
-        'price',
-        'qty',
-        'isActive',
-        'image',
-    ];
+    protected $fillable = ['groupid','subgroup','created_at','updated_at'];
 
     public function Group(){
         return $this->hasOne(Group::class, 'id', 'groupid');
